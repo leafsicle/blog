@@ -3,7 +3,7 @@ const BlogList = ({ blogs, setBlogs }) => {
     <div>
       {blogs.map(blog => (
         <div key={blog.id} className="blog-preview">
-          <a href={blog.link}>
+          <a href={blog.link} target="_blank" title="Open in new tab">
             <h2>{blog.title}</h2>
           </a>
           <span className="subtext">by {blog.author}</span>
