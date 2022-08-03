@@ -1,17 +1,19 @@
-import React from "react"
 import { useState } from "react"
+import BlogList from "./BlogList"
 
 const Home = () => {
-  const [name, setName] = useState("Matt")
-  let handleClick = newname => {
-    setName(newname)
-  }
-
+  const [blogs, setBlogs] = useState([
+    { title: "Blog from the start", body: "words", author: "M. Cooke", id: 1 },
+    {
+      title: "second",
+      body: "All of these unencumbered numbered words",
+      author: "ME",
+      id: 2
+    }
+  ])
   return (
     <div className="home">
-      <h1>Home</h1>
-      <p>{name}</p>
-      <button onClick={() => handleClick("Beans")}>Change Name</button>
+      <BlogList blogs={blogs} setBlogs={setBlogs} />j
     </div>
   )
 }
