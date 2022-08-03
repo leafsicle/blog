@@ -3,17 +3,21 @@ const BlogList = ({ blogs, setBlogs }) => {
     <div>
       {blogs.map(blog => (
         <div key={blog.id} className="blog-preview">
-          <h2>{blog.title}</h2>
-          by {blog.author}
+          <a href={blog.link}>
+            <h2>{blog.title}</h2>
+          </a>
+          <span className="subtext">by {blog.author}</span>
+          <br />
         </div>
       ))}
       <button
         onClick={() =>
           setBlogs(
             blogs.concat({
-              title: "",
-              body: "",
-              author: "",
+              title: "Bacon Pancakes",
+              body: "Making bacon pancakes",
+              author: "Jbat",
+              link: "https://www.youtube.com/watch?v=cUYSGojUuAU",
               id: blogs.length + 1
             })
           )

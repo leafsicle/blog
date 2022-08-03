@@ -3,11 +3,18 @@ import BlogList from "./BlogList"
 
 const Home = () => {
   const [blogs, setBlogs] = useState([
-    { title: "Blog from the start", body: "words", author: "M. Cooke", id: 1 },
+    {
+      title: "Blog from the start",
+      body: "words",
+      author: "M. Cooke",
+      link: "",
+      id: 1
+    },
     {
       title: "second",
       body: "All of these unencumbered numbered words",
       author: "ME",
+      link: "",
       id: 2
     }
   ])
