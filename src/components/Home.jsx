@@ -4,21 +4,37 @@ import BlogList from "./BlogList"
 const Home = () => {
   const [blogs, setBlogs] = useState([
     {
-      title: "Blog from the start",
-      body: "lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-      author: "M. Cooke",
+      title: "Wiping down the counters",
+      body: "lorem ipsum dolor sit amet",
+      author: "MCooke",
       id: 1
     },
     {
-      title: "second",
-      body: "All of these unencumbered numbered words",
-      author: "ME",
+      title: "Washing your hands",
+      body: "lorem ipsum dolor sit",
+      author: "self",
       id: 2
+    },
+    {
+      title: "Taking out the cutting boards",
+      body: "lorem ipsum dolor sit amet",
+      author: "self",
+      id: 3
     }
   ])
+  let handleDelete = id => {}
+
   return (
     <div className="home">
-      <BlogList blogs={blogs} title="Kitchen themed title here" />
+      <BlogList
+        blogs={blogs}
+        blogTitle="Kitchen themed title here"
+        handleDelete={handleDelete}
+      />
+      <BlogList
+        blogs={blogs.filter(blog => blog.author === "MCooke")}
+        blogTitle="M. Cooke's Blogs"
+      />
     </div>
   )
 }

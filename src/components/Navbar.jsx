@@ -15,7 +15,7 @@ const Navbar = () => {
         <li>
           <a
             href="/sketchbook"
-            title="This page is likened to an artists sketchbook; ideas and studies are organized thematically"
+            title="sketchbook is likened to an artists sketchbook; ideas and studies are organized thematically"
           >
             Sketchbook
           </a>
