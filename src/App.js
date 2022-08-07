@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 function App() {
-  const title = "Blog and sandbox"
+  const title = "The Cutting Board"
 
   return (
     <div className="App">
